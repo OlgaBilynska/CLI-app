@@ -1,11 +1,6 @@
-// import yargs from "yargs";
 import { program } from "commander";
 
 import * as contactService from "./contacts.js";
-// const argv = require("yargs").argv;
-
-// const { Command } = require("commander");
-// const program = new Command();
 
 program
   .option("-a, --action <type>", "choose action")
@@ -55,20 +50,3 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
 };
 
 invokeAction(argv);
-
-// const { argv } = yargs(process.argv.slice(2));
-// // console.log(response.argv);
-// invokeAction(argv);
-
-// invokeAction({
-//   action: "remove",
-//   id: "75sdoGh2rsOv6XaiCprBh",
-// });
-
-// console.log(process.argv);
-
-// const actionIndex = process.argv.indexOf("--action");
-// if (actionIndex !== -1) {
-//   const action = process.argv[actionIndex + 1];
-//   invokeAction({ action });
-// }
